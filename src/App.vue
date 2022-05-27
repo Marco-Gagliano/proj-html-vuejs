@@ -15,18 +15,18 @@
 
 <script>
 import HeaderComponent from './components/HeaderComponent.vue';
+import JumbotronComponent from './components/JumbotronComponent.vue';
 import MainComponent from './components/MainComponent.vue';
 import FooterComponent from './components/FooterComponent.vue';
-import JumbotronComponent from './components/JumbotronComponent.vue';
 
 
 export default {
   name: 'App',
   components: {
     HeaderComponent,
+    JumbotronComponent,
     MainComponent,
-    FooterComponent,
-    JumbotronComponent
+    FooterComponent
 }
 }
 </script>
@@ -37,5 +37,16 @@ export default {
   @import './assets/style/vars';
   @import './assets/style/general';
   @import './assets/style/mixins';
+
+  ul {
+    list-style: none;
+    
+    a {
+    text-decoration: none;
+    color: #000000
+    }
+  }
+
+  
 
 </style>
