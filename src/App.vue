@@ -3,17 +3,21 @@
 
     <HeaderComponent/>
 
+    <JumbotronComponent/>
+
     <MainComponent/>
 
     <FooterComponent/>
-    
+
   </div>
 </template>
+
 
 <script>
 import HeaderComponent from './components/HeaderComponent.vue';
 import MainComponent from './components/MainComponent.vue';
 import FooterComponent from './components/FooterComponent.vue';
+import JumbotronComponent from './components/JumbotronComponent.vue';
 
 
 export default {
@@ -21,12 +25,17 @@ export default {
   components: {
     HeaderComponent,
     MainComponent,
-    FooterComponent
+    FooterComponent,
+    JumbotronComponent
 }
 }
 </script>
 
+
 <style lang="scss">
 
+  @import './assets/style/vars';
+  @import './assets/style/general';
+  @import './assets/style/mixins';
 
 </style>
