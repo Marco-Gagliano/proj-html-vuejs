@@ -1,65 +1,98 @@
 <template>
   
-  <div class="team container-fluid">
+  <div class="team container-fluid my-5">
 
     <div class="container">
 
+      <h6 class="text-uppercase mt-5">we like what we do</h6>
       <div class="row">
 
-        <div class="col">
-          <h6>we like what we do</h6>
-          <h1>Team of Expert</h1>
-          <p>Ethics and integrity are the bases on which our professionals build their careers. They are fundamentals that become daily attitudes.</p>
+        <div class="description-team col-8">
+          <h1 class="fw-bold">Team of Experts</h1>
+          <p class="mb-3">Ethics and integrity are the bases on which our professionals build their careers. They are fundamentals that become daily attitudes.</p>
 
           <div class="row">
 
             <div class="col-6">
-              <h1>IMMAGINE</h1>
-              <h3>David Cooper</h3>
-              <p>CTO & CO-FOUNDER</p>
-              <i>facebook </i>
-              <i>twitter </i>
-              <i>linkedin </i>
+              
+              <img src="../assets/images/team-1.jpg" alt="David Cooper Image">
+              
+              <div class="info-team">
+                <h3>David Cooper</h3>
+                <span>CTO & CO-FOUNDER</span>
+
+                <div class="contact-team">
+                  <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                  <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                  <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+
+              </div>
             </div>
             
             <div class="col-6">
-              <h1>IMMAGINE</h1>
-              <h3>Oliver Jones</h3>
-              <p>CHIEF PROCUREMENT</p>
-              <i>facebook </i>
-              <i>twitter </i>
-              <i>linkedin </i>
+              
+              <img src="../assets/images/team-3.jpg" alt="Oliver Jones Image">
+              
+              <div class="info-team">
+                <h3>Oliver Jones</h3>
+                <span>CHIEF PROCUREMENT</span>
+
+                <div class="contact-team">
+                  <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                  <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                  <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+
+              </div>
             </div>
 
             
             <div class="col-6">
-              <h1>IMMAGINE</h1>
-              <h3>Emma Lopez</h3>
-              <p>CHIEF MARKETING</p>
-              <i>facebook </i>
-              <i>twitter </i>
-              <i>linkedin </i>
+              
+              <img src="../assets/images/team-2.jpg" alt="Emma Lopez Image">
+              
+              <div class="info-team">
+                <h3>Emma Lopez</h3>
+                <span>CHIEF MARKETING</span>
+
+                <div class="contact-team">
+                  <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                  <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                  <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+
+              </div>
             </div>
             
             <div class="col-6">
-              <h1>IMMAGINE</h1>
-              <h3>T. Johnson</h3>  
-              <p>CEO & PRESIDENT</p>
-              <i>facebook </i> 
-              <i>twitter </i> 
-              <i>linkedin </i> 
+              
+              <img src="../assets/images/team-4.jpg" alt="T. Johnson Image">
+              
+              <div class="info-team">
+                <h3>T. Johnson</h3>  
+                <span>CEO & PRESIDENT</span>
+
+                <div class="contact-team">
+                  <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                  <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                  <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+
+              </div>
             </div>
 
           </div>
 
         </div>  
 
-        <div class="col">
-          <h1>President Speech</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore voluptatem dolorem fugiat!</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis quo ducimus deleniti! Soluta laborum eaque minima. Consequatur mollitia perferendis quis similique maiores.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam incidunt animi, cum deleniti suscipit, laboriosam voluptas sapiente reiciendis asperiores, enim perferendis vitae. Suscipit velit omnis minima exercitationem praesentium amet? Voluptate.</p>
-          <h6>T. Johnson</h6>
+        <div class="col-4">
+          <h3>President Speech</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesent ut lacinia diam.</p>
+          <p>Vivamus efficitur et est quis posuere. Nulla sollicitudin vulputate dui, id pretium tortor congue ue. Integer aliquet justo eu quam volupat ullamcorper.</p>
+          <p>Duis ut hendrerit mauris. Phasellus faucibus ut enim vel tincidunt. Nunc venenatis a dui et laoreet</p>
+          <span class="py-4">T. Johnson <i class="fa-solid fa-quote-right"></i></span>
+          
         </div>  
 
       </div>
@@ -81,24 +114,88 @@ export default {
 
 <style lang="scss" scoped>
 
-  .team {
-    background-color: #FF1111;
-    border: 1px solid #000000;
+h6 {
+  color: #52BABB;
+  font-weight: bold;
+}
+
+.col-6 img {
+  float: left;
+  width: 31%;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+
+.col-6 {
+  margin: 20px 0;
+  
+}
+
+.col-4 {
+  background-color: #048383;
+  padding: 35px;
+  border-radius: 5px;
+
+  i {
+    float: right;
+    font-size: 20px;
   }
 
-  .container {
-    background-color: #FFFFFF;
-    border: 1px solid #000000;
+  h3 {
+    color: #FFFFFF;
+    font-weight: bold;
   }
 
-  .row {
-    background-color: #D9FF00;
-    border: 1px solid #000000;
+  p {
+    color: #BCBDBD;
+    padding-right: 69px;
+    margin: 20px 0;
+    font-size: 19px;
   }
 
-  .col, .col-6 {
-    background-color: #00FF15;
-    border: 1px solid #000000;
+  span {
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: bold;
+    padding-top: 50px;
+    
   }
+}
+
+.description-team h1 {
+  font-size: 65px;
+}
+.description-team p {
+  padding-right: 150px;
+  color: #676669;
+  font-size: 19px;
+}
+
+.contact-team  {
+  display: flex;
+  justify-content: start;
+}
+
+.info-team {
+
+  h3 {
+    font-weight: bold;
+  }
+
+  span {
+    color: #676669
+  }
+
+  i {
+    color: #048383;
+    background-color: #E7EEE9;
+    font-size: 18px;
+    margin: 28px 16px;
+    padding: 10px;
+    border-radius: 100px;
+  }
+}
+
+  
 
 </style>
