@@ -96,26 +96,6 @@ export default {
     
   }
 
-  .news-text-1 {
-    position: absolute;
-    top: 700%;
-    left: 27%;
-    transform: translate(-50%, -50%);
-  }
-
-  .news-text-2 {
-    position: absolute;
-    top: 700%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  .news-text-3 {
-    position: absolute;
-    top: 700%;
-    left: 73%;
-    transform: translate(-50%, -50%);
-  }
 }
 
 
