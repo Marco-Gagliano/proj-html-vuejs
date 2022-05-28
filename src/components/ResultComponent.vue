@@ -4,27 +4,27 @@
 
     <div class="container text-center">
 
-      <p>what are we doing</p>
-      <h1>results in numbers</h1>
+      <p class="text-uppercase pt-5">what are we doing</p>
+      <h1 class="text-light mb-1">Results in Numbers</h1>
 
       <div class="row">
-        <div class="col-3">
-          <p>128</p>
+        <div class="col-3 my-5">
+          <h2>128</h2>
           <p>Certification</p>
         </div>
 
-        <div class="col-3">
-          <p>230</p>
+        <div class="col-3 my-5">
+          <h2>230</h2>
           <p>Employees</p>
         </div>
 
-        <div class="col-3">
-          <p>517</p>
+        <div class="col-3 my-5">
+          <h2>517</h2>
           <p>Customers</p>
         </div>
 
-        <div class="col-3">
-          <p>94</p>
+        <div class="col-3 my-5">
+          <h2>94</h2>
           <p>Countries Served</p>
         </div>
 
@@ -46,24 +46,32 @@ export default {
 
 <style lang="scss" scoped>
 
-  .container {
-    background-color: #FFFFFF;
-    border: 1px solid #000000;
-  }
-
   .results {
-    background-color: #FF1111;
-    border: 1px solid #000000;
+    // background-image: url(../assets/images/results.jpg);
+    background: linear-gradient(
+            rgba(0, 0, 0, 0.7), 
+            rgba(0, 0, 0, 0.7)
+    ),
+    url(../assets/images/results.jpg);
+    
+    background-position: center;
+    background-size: cover;
   }
 
-  .row {
-    background-color: #D9FF00;
-    border: 1px solid #000000;
+  h1, h2, p {
+    font-weight: bold;
   }
 
-  .col-3 {
-    background-color: #00FF15;
-    border: 1px solid #000000;
+  p {
+    color: #048383;
+  }
+
+  .col-3 h2 {
+    color: #048383;
+  }
+    
+  .col-3 p {  
+    color: #FFFFFF;
   }
 
 </style>
