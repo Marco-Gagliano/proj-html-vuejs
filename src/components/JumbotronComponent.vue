@@ -2,14 +2,14 @@
 
   <div class="jumbotron container-fluid">
 
-    <div class="container text-center">
+    <div class="container">
 
-      <div class="row">
+      <div class="row text-center">
         <div class="col">
-          <p>introdution video</p>
-          <h1>advisory performance</h1>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex, explicabo vel odio, accusamus distinctio autem unde dolorum quo aperiam libero, earum consectetur atque?</p>
-          <h1>immagine</h1>
+          <span class="text-uppercase fw-bold">introdution video</span>
+          <h1 class="my-3 fw-bold">Advisory Performance</h1>
+          <p>Financial executives need to review their strategies, operating models and capabilities so that their areas can generate sound information for better decision making.</p>
+          <img src="../assets/images/video-1.jpg" alt="Video Jumbotron">
         </div>
       </div>
 
@@ -30,24 +30,27 @@ export default {
 
 <style lang="scss" scoped>
 
-  .jumbotron {
-    background-color: #FF1111;
-    border: 1px solid #000000;
-  }
+.jumbotron {
+  padding: 100px 0
+}
 
-  .container {
-    background-color: #FFFFFF;
-    border: 1px solid #000000;
-  }
+span {
+  color: #048383
+}
 
-  .row {
-    background-color: #D9FF00;
-    border: 1px solid #000000;
-  }
+p {
+  margin: 0 300px;
+  color: #676669
+}
 
-  .col {
-    background-color: #00FF15;
-    border: 1px solid #000000;
-  }
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  padding: 30px 0;
+}
+
+  
 
 </style>
