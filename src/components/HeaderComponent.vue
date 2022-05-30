@@ -36,20 +36,21 @@
         <div class="container">
           <div class="row">
 
-            <div class="col-6">
-              <h3 class="text-light mt-4">NEXGEN</h3>
+            <div class="col-4 mt-4">
+              <p class="text-light">NEXGEN</p>
             </div>
 
-            <div class="col-6">
-              <ul class="text-light mt-4">
-                <li><a href="#">HOME</a></li>
-                <li><a href="#">ABOUT</a></li>
-                <li><a href="#">SERVICE</a></li>
-                <li><a href="#">TEAM</a></li>
-                <li><a href="#">BLOG</a></li>
-                <li><a href="#"><i class="fa-regular fa-user text-light"></i></a></li>
-                <button>GET IN TOUCH</button>
+            <div class="col-7 mt-4">
+
+              <ul v-for="(menu, index) in menuList" :key="`menu${index}`">
+                <li><a :href="menu.href">{{menu.name}}</a></li>
               </ul>
+
+            </div>
+
+            <div class="col-1 mt-4">
+              <a href="#"><i class="fa-regular fa-user"></i></a>
+              <button>GET IN TOUCH</button>
             </div>
 
           </div>
@@ -82,7 +83,38 @@
 <script>
 
 export default {
-  name: 'HeaderComponent'
+  name: 'HeaderComponent',
+
+  data() {
+    return {
+      menuList: [
+        {
+          name: 'HOME',
+          href: '#'
+        },
+
+        {
+          name: 'ABOUT',
+          href: '#'
+        },
+
+        {
+          name: 'SERVICE',
+          href: '#'
+        },
+
+        {
+          name: 'TEAM',
+          href: '#'
+        },
+
+        {
+          name: 'BLOG',
+          href: '#'
+        },
+      ]
+    }
+  }
 
 }
 </script>
@@ -101,11 +133,6 @@ export default {
     height: 1055px;
   }
 
-  ul {
-    display: flex;
-    justify-content: end
-  }
-
   i {
     margin: 0 20px;
     color: #676669
@@ -115,22 +142,45 @@ export default {
     color: #676669
   }
 
+  p {
+    letter-spacing: 5px;
+    font-weight: bold;
+  }
+
   // /GENERAL PRESETS
 
 
   // INFO
   .info {
     background-color: #1D2528;
+    
   }
 
   .info a {
     text-decoration: none;
     color: #676669;
   }
+
+  .info ul {
+    display: flex;
+    flex-direction: row;
+  }
   // /INFO
   
 
   // MENU
+
+
+  .col-7 {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+  }
+
+  .col-1 {
+    display: flex;
+    flex-direction: row;
+  }
 
   .menu a {
     text-decoration: none;
