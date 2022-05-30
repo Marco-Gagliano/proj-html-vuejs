@@ -2,12 +2,13 @@
   
   <div class="messagge container-fluid">
     <div class="container">
-      <div class="row">
+      <div class="row send-messagge">
 
-        <div class="col-6">
+        <div class="col-6 my-5">
+
           <h6>send a messagge</h6>
-          <h1>Get in touch</h1>
-          <p>we will respond to your messagge as soon as possible</p>
+          <h1 class="my-4">Get in Touch</h1>
+          <p class="my-4">We will respond to your messagge as soon as possible.</p>
 
           <div class="row">
 
@@ -25,38 +26,46 @@
             </div>
 
             <div class="col-6">
-              <input type="text" placeholder="More info">
+              <input type="text" placeholder="More Info">
             </div>
 
-            <div class="col">
-              <input type="text" placeholder="messagge">
+            <div class="col-12">
+              <input type="text" placeholder="Messagge" class="messagge">
+            </div>
+
+            <div class="col mt-3">
+              <button>SEND</button>
             </div>
 
           </div>
 
         </div>  
 
-        <div class="col-6">
-          <h5>Example Inc.</h5>
+        <div class="contact-messagge col-6 my-5">
+
+          <h4 class="fw-bold">Example Inc.</h4>
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
           <p>Praesent diam lacus, dapibus sed imperdit consectur.</p>
+
           <ul>
             <li>
-              <i>TELEFONO  </i>
+              <i class="fa-solid fa-phone"></i>
               <span>+1 (305) 1234-5678</span>
             </li>
 
             <li>
-              <i>EMAIL  </i>
-              <span>hello@spanle.com</span>
+              <i class="fa-solid fa-envelope"></i>
+              <span>hello@example.com</span>
             </li>
 
             <li>
-              <i>LUOGO  </i>
+              <i class="fa-solid fa-location-dot"></i>
               <span>Main Avenue, 987</span>
-              <button>VIEW MAP</button>
             </li>
-            
+
+            <li>
+              <button class="button-map">VIEW MAP</button>
+            </li>
           </ul>
           
         </div>  
@@ -78,24 +87,82 @@ export default {
 
 <style lang="scss" scoped>
 
-  .messagge {
-    background-color: #FF1111;
-    border: 1px solid #000000;
+  .send-messagge {
+
+    h6 {
+      color: #048383;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    h1 {
+      font-weight: bold;
+    }
+
+    p {
+      color: #676669
+    }
+
+    input {
+      background-color: #E7EEE9;
+      border: 0;
+      margin-bottom: 10px;
+      padding: 10px;
+      border-radius: 5px;
+      width: 100%;
+    }
+
+    ul {
+      padding: 0;
+
+      li {
+        padding-bottom: 15px;
+      }
+    }
+
+    .messagge {
+      padding-bottom: 100px
+    }
+
+    button {
+      background-color: #048383;
+      color: #FFFFFF;
+      border: none;
+      border: 1px solid #048383;
+      border-radius: 5px;
+      padding: 8px 30px;
+    }
+
+    .button-map {
+      background-color: #FFFFFF;
+      color: #048383;
+      border: none;
+      border: 1px solid #048383;
+      border-radius: 5px;
+      padding: 8px 30px;
+    }
   }
 
-  .container {
-    background-color: #FFFFFF;
-    border: 1px solid #000000;
-  }
+  .contact-messagge {
+    color: #676669;
+    padding-left: 35px;
 
-  .row {
-    background-color: #D9FF00;
-    border: 1px solid #000000;
-  }
+    h4 {
+      color: #1D2528;
+    }
 
-  .col, .col-6 {
-    background-color: #00FF15;
-    border: 1px solid #000000;
+    p {
+      padding-right: 273px;
+    }
+
+    i {
+      color: #048383;
+      background-color: #E7EEE9;
+      padding: 12px;
+      margin-right: 15px;
+      font-size: 18px;
+      border-radius: 100px;
+    }
   }
 
 </style>
