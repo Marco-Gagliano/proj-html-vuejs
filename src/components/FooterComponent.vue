@@ -6,10 +6,8 @@
         <div class="row">
 
           <div class="col-3 info">
+            <h4>nexgen</h4>          
             <ul>
-              <li>
-                <h4>nexgen</h4>          
-              </li>
               
               <li>
                 <p>A Functional HTML Template for Corporate & Business.</p>
@@ -40,117 +38,52 @@
           <div class="col-3 contact">
 
             <ul>
-              <li><h3>About</h3></li>
-
-              <li>  
-                <a href="#"><i class="fa-solid fa-chevron-right"></i>
-
-                The Company</a>
+              <li>
+                <h3>About</h3>
               </li>
-
-              <li>  
-                <a href="#"><i class="fa-solid fa-chevron-right"></i>
-                Institutional</a>
-              </li>
-
-              <li>  
-                <a href="#"><i class="fa-solid fa-chevron-right"></i>
-                Social & Events</a>
-              </li>
-
-              <li>  
-                <a href="#"><i class="fa-solid fa-chevron-right"></i>
-                Innovation</a>
-              </li>
-
-              <li>  
-                <a href="#"><i class="fa-solid fa-chevron-right"></i>
-                Environment</a>
-              </li>
-
-              <li>  
-                <a href="#"><i class="fa-solid fa-chevron-right"></i>
-                Technology</a>
-              </li>
-
             </ul>
-          </div>
 
-          <div class="col-3 contact">
-          
-            <ul>
-              <li><h3>Services</h3></li>
-
-              <li>
-                <a href="#"><i class="fa-solid fa-chevron-right"></i>
-                Audit & Assurance</a>
+            <ul v-for="(contact, index) in aboutContacts" :key="`aboutContacts${index}`">
+              <li>  
+                <a :href="contact.href"><i :class="contact.icon"></i>
+                {{contact.name}}</a>
               </li>
-
-              <li>
-                <a href="#"><i class="fa-solid fa-chevron-right"></i>
-                Financial Advisory</a>
-              </li>
-
-              <li>
-                <a href="#"><i class="fa-solid fa-chevron-right"></i>
-                Analytics M&A</a>
-              </li>
-
-              <li>
-                <a href="#"><i class="fa-solid fa-chevron-right"></i>
-                Middle Marketing</a>
-              </li>
-
-              <li>
-                <a href="#"><i class="fa-solid fa-chevron-right"></i>
-                Legal Consulting</a>
-              </li>
-
-              <li>
-                <a href="#"><i class="fa-solid fa-chevron-right"></i>
-                Regulatory Risk</a>
-              </li>
-
             </ul>
 
           </div>
 
           <div class="col-3 contact">
-          
+
             <ul>
-              <li><h3>Support</h3></li>
-              
               <li>
-                <a href="#"><i class="fa-solid fa-chevron-right"></i>
-                Responsibility</a>
+                <h3>Services</h3>
               </li>
-
-              <li>
-                <a href="#"><i class="fa-solid fa-chevron-right"></i>
-                Terms of Use</a>
-              </li>
-
-              <li>
-                <a href="#"><i class="fa-solid fa-chevron-right"></i>
-                About Cookies</a>
-              </li>
-
-              <li>
-                <a href="#"><i class="fa-solid fa-chevron-right"></i>
-                Privacy Policy</a>
-              </li>
-
-              <li>
-                <a href="#"><i class="fa-solid fa-chevron-right"></i>
-                Accessibility</a>
-              </li>
-
-              <li>
-                <a href="#"><i class="fa-solid fa-chevron-right"></i>
-                Information</a>
-              </li>
-
             </ul>
+
+            <ul v-for="(contact, index) in servicesContacts" :key="`servicesContacts${index}`">
+              <li>  
+                <a :href="contact.href"><i :class="contact.icon"></i>
+                {{contact.name}}</a>
+              </li>
+            </ul>
+
+          </div>
+
+          <div class="col-3 contact">
+
+            <ul>
+              <li>
+                <h3>Support</h3>
+              </li>
+            </ul>
+
+            <ul v-for="(contact, index) in supportContacts" :key="`supportContacts${index}`">
+              <li>  
+                <a :href="contact.href"><i :class="contact.icon"></i>
+                {{contact.name}}</a>
+              </li>
+            </ul>
+
           </div>
           
         </div>
@@ -184,7 +117,125 @@
 <script>
 
 export default {
-  name: 'FooterComponent'
+  name: 'FooterComponent',
+
+  data() {
+    return {
+      aboutContacts: [
+        {
+          name: 'The Company',
+          href: '#',
+          icon: 'fa-solid fa-chevron-right',
+        },
+        
+        {
+          name: 'Institutional',
+          href: '#',
+          icon: 'fa-solid fa-chevron-right',
+        },
+
+        {
+          name: 'Social & Events',
+          href: '#',
+          icon: 'fa-solid fa-chevron-right',
+        },
+
+        {
+          name: 'Innovation',
+          href: '#',
+          icon: 'fa-solid fa-chevron-right',
+        },
+
+        {
+          name: 'Environment',
+          href: '#',
+          icon: 'fa-solid fa-chevron-right',
+        },
+
+        {
+          name: 'Technology',
+          href: '#',
+          icon: 'fa-solid fa-chevron-right',
+        },
+      ],
+
+      servicesContacts: [
+        {
+          name: 'Audit & Assurance',
+          href: '#',
+          icon: 'fa-solid fa-chevron-right',
+        },
+        
+        {
+          name: 'Financial Advisory',
+          href: '#',
+          icon: 'fa-solid fa-chevron-right',
+        },
+
+        {
+          name: 'Analytics M&A',
+          href: '#',
+          icon: 'fa-solid fa-chevron-right',
+        },
+
+        {
+          name: 'Middle Marketing',
+          href: '#',
+          icon: 'fa-solid fa-chevron-right',
+        },
+
+        {
+          name: 'Legal Consulting',
+          href: '#',
+          icon: 'fa-solid fa-chevron-right',
+        },
+
+        {
+          name: 'Regulatory Risk',
+          href: '#',
+          icon: 'fa-solid fa-chevron-right',
+        },
+      ],
+
+      supportContacts: [
+        {
+          name: 'Responsibility',
+          href: '#',
+          icon: 'fa-solid fa-chevron-right',
+        },
+        
+        {
+          name: 'Terms of Use',
+          href: '#',
+          icon: 'fa-solid fa-chevron-right',
+        },
+
+        {
+          name: 'About Cookies',
+          href: '#',
+          icon: 'fa-solid fa-chevron-right',
+        },
+
+        {
+          name: 'Privacy Policy',
+          href: '#',
+          icon: 'fa-solid fa-chevron-right',
+        },
+
+        {
+          name: 'Accessibility',
+          href: '#',
+          icon: 'fa-solid fa-chevron-right',
+        },
+
+        {
+          name: 'Information',
+          href: '#',
+          icon: 'fa-solid fa-chevron-right',
+        },
+      ]
+    }
+  },
 
 }
 </script>
@@ -200,6 +251,10 @@ export default {
     background-image: url(../assets/images/bg-7.jpg);
     background-position: center;
     color: #BCBDBD;
+
+    ul {
+      margin-bottom: 0px;
+    }
   }
 
   .info {
@@ -241,12 +296,19 @@ export default {
   }
 
   .contact {
-    display: flex;
-    align-items: center;
     background-color: rgba($color: #1D2528, $alpha: 0.4);
     border-radius: 10px;
     margin-right: 30px;
     width: calc(100% / 5);
+
+    ul {
+      margin: 10px;
+      font-size: 20px;
+
+      a {
+        color: #BCBDBD;
+      }
+    }
   }
   
 
