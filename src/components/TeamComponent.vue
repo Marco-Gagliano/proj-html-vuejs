@@ -13,42 +13,25 @@
 
           <div class="row">
 
-            <div class="col-6">
+            <div class="col-6" v-for="(team, index) in cardTeam" :key="`team${index}`">
               
-              <img src="../assets/images/team-1.jpg" alt="David Cooper Image">
-              
-              <div class="info-team">
-                <h3>David Cooper</h3>
-                <span>CTO & CO-FOUNDER</span>
-
-                <div class="contact-team">
-                  <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                  <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                  <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                </div>
-
-              </div>
-            </div>
-            
-            <div class="col-6">
-              
-              <img src="../assets/images/team-3.jpg" alt="Oliver Jones Image">
+              <img :src="team.img" :alt="team.name">
               
               <div class="info-team">
-                <h3>Oliver Jones</h3>
-                <span>CHIEF PROCUREMENT</span>
+                <h3>{{team.name}}</h3>
+                <span>{{team.role}}</span>
 
                 <div class="contact-team">
-                  <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                  <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                  <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                  <a href="#"><i :class="team.fb"></i></a>
+                  <a href="#"><i :class="team.twitter"></i></a>
+                  <a href="#"><i :class="team.linkedIn"></i></a>
                 </div>
 
               </div>
             </div>
 
             
-            <div class="col-6">
+            <!-- <div class="col-6">
               
               <img src="../assets/images/team-2.jpg" alt="Emma Lopez Image">
               
@@ -80,7 +63,7 @@
                 </div>
 
               </div>
-            </div>
+            </div> -->
 
           </div>
 
@@ -107,7 +90,51 @@
 <script>
 
 export default {
-  name: 'TeamComponent'
+  name: 'TeamComponent',
+
+  data() {
+    return {
+      cardTeam: [
+        {
+          img: require('../assets/images/team-1.jpg'),
+          name: 'David Cooper',
+          role: 'CTO & CO-FOUNDER',
+          fb: 'fa-brands fa-facebook-f',
+          twitter: 'fa-brands fa-twitter',
+          linkedIn: 'fa-brands fa-linkedin-in',
+        },
+
+        {
+          img: require('../assets/images/team-3.jpg'),
+          name: 'Oliver Jones',
+          role: 'CHIEF PROCUREMENT',
+          fb: 'fa-brands fa-facebook-f',
+          twitter: 'fa-brands fa-twitter',
+          linkedIn: 'fa-brands fa-linkedin-in',
+        },
+
+        {
+          img: require('../assets/images/team-2.jpg'),
+          name: 'Emma Lopez',
+          role: 'CHIEF MARKETING',
+          fb: 'fa-brands fa-facebook-f',
+          twitter: 'fa-brands fa-twitter',
+          linkedIn: 'fa-brands fa-linkedin-in',
+        },
+
+        {
+          img: require('../assets/images/team-4.jpg'),
+          name: 'T. Johnson',
+          role: 'CHIEF PROCUREMENT',
+          fb: 'fa-brands fa-facebook-f',
+          twitter: 'fa-brands fa-twitter',
+          linkedIn: 'fa-brands fa-linkedin-in',
+        },
+      ]
+    }
+
+
+  }
 }
 </script>
 
