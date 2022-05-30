@@ -24,51 +24,51 @@
       </div>
 
       <div class="description-service">
-        <div class="row justify-content-between">
+        <div class="row">
 
-          <div class="col">
-            <i>icona</i>
-            <i class="fa-solid fa-arrow-right"></i>
-            <h5>Audit & Assurance</h5>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+          <div class="col-3" v-for="(service, index) in serviceList" :key="`service${index}`">
+            <i :class="service.iconList"></i>
+            <a :href="service.href"><i :class="service.iconLink"></i></a>
+            <h5>{{service.name}}</h5>
+            <p>{{service.text}}</p>
           </div>
           
-          <div class="col">
-            <i class="fa-regular fa-briefcase"></i>
+          <!-- <div class="col">
+            <i class="fa-solid fa-briefcase"></i>
             <i class="fa-solid fa-arrow-right"></i>
             <h5>Financial Advisory</h5>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
           </div>
           
           <div class="col">
-            <i class="fa-regular fa-chart-simple"></i>
-            <a href="#"><i class="fa-solid fa-arrow-right"></i></a>
+            <i class="fa-solid fa-chart-simple"></i>
+            <a :href="service.href"><i :class="service.iconLink"></i></a>
             <h5>Analytics and M&A</h5>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
           </div>
         </div>  
           
-        <div class="row justify-content-between">
+        <div class="row">
           <div class="col">
-            <i>icona</i>
+            <i class="fa-solid fa-plane-up"></i>
             <a href="#"><i class="fa-solid fa-arrow-right"></i></a>
             <h5>Middle Marketing</h5>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
           </div>
           
           <div class="col">
-            <i class="fa-solid fa-globe-stand"></i>
+            <i class="fa-solid fa-globe"></i>
             <a href="#"><i class="fa-solid fa-arrow-right"></i></a>
             <h5>Legal Consulting</h5>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
           </div>
           
           <div class="col">
-            <i>icona</i>
+            <i class="fa-solid fa-inbox"></i>
             <a href="#"><i class="fa-solid fa-arrow-right"></i></a>  
             <h5>Regulatory Risk</h5>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>  
-          </div>
+          </div> -->
 
         </div>
       </div>
@@ -83,7 +83,61 @@
 <script>
 
 export default {
-  name: 'BusinessComponent'
+  name: 'BusinessComponent',
+
+  data() {
+    return {
+      serviceList: [
+        {
+          name: 'Audit & Assurance',
+          text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit.',
+          href: '#',
+          iconList: 'fa-solid fa-network-wired',
+          iconLink: 'fa-solid fa-arrow-right',
+        },
+
+        {
+          name: 'Financial Advisory',
+          text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit.',
+          href: '#',
+          iconList: 'fa-solid fa-briefcase',
+          iconLink: 'fa-solid fa-arrow-right',
+        },
+
+        {
+          name: 'Analytics and M&A',
+          text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit.',
+          href: '#',
+          iconList: 'fa-solid fa-chart-simple',
+          iconLink: 'fa-solid fa-arrow-right',
+        },
+
+        {
+          name: 'Middle Marketing',
+          text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit.',
+          href: '#',
+          iconList: 'fa-solid fa-plane-up',
+          iconLink: 'fa-solid fa-arrow-right',
+        },
+
+        {
+          name: 'Legal Consulting',
+          text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit.',
+          href: '#',
+          iconList: 'fa-solid fa-globe',
+          iconLink: 'fa-solid fa-arrow-right',
+        },
+
+        {
+          name: 'Regulatory Risk',
+          text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit.',
+          href: '#',
+          iconList: 'fa-solid fa-inbox',
+          iconLink: 'fa-solid fa-arrow-right',
+        },
+      ]
+    }
+  }
 
 }
 </script>
@@ -111,7 +165,8 @@ export default {
   }
 
   p {
-    color: $silver_sand
+    color: $silver_sand;
+    padding-right: 25px;
   }
 
 
@@ -139,21 +194,38 @@ export default {
     color: $white;
   }
 
-  .description-service .col {
+
+
+  .description-service .col-3 {
     background-color: $shark;
     margin: 15px;
     padding: 30px 50px;
     border-radius: 7px;
+    width: 31%;
+    
   }
 
   .description-service i {
     color: $blue_lagoon;
+    font-size: 40px;
   }
 
   .description-service .fa-arrow-right {
     float: right;
     font-size: 24px;
     color: $surfie_green;
+    transition: ease-in .1s;
+    text-align: center;
+
+    &:hover {
+      background-color: $blue_lagoon;
+      color: $white;
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      border-radius: 50px;
+      text-align: center;
+    }
   }
   // /DESCRIPTION SERVICE
 
