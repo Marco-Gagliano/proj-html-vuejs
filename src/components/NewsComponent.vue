@@ -47,56 +47,55 @@ export default {
 
 <style lang="scss" scoped>
 
-.news {
-  background-color: #E7EEE9;
+  @import '../assets/style/vars';
 
-  h6 {
-    text-transform: uppercase;
-    font-weight: bold;
-    color: #048383;
+  .news {
+    background-color: $gray_nurse;
+
+    h6 {
+      text-transform: uppercase;
+      font-weight: bold;
+      color: $blue_lagoon;
+    }
+
+    h1 {
+      text-transform: capitalize;
+      font-weight: bold;
+      font-size: 58px;
+    }
+
+    p {
+      font-size: 19px;
+      color: $salt_box;
+    }
+
+    button {
+      margin: 0 10px;
+      background-color: $blue_lagoon;
+      color: $white;
+      border: none;
+      border: 1px solid $blue_lagoon;
+      border-radius: 5px;
+      padding: 8px 30px;
+    }
   }
 
-  h1 {
-    text-transform: capitalize;
-    font-weight: bold;
-    font-size: 58px;
-  }
+  .col-4 {
 
-  p {
-    font-size: 19px;
-    color: #676669
-  }
-
-  button {
-    margin: 0 10px;
-    background-color: #048383;
-    color: #FFFFFF;
-    border: none;
-    border: 1px solid #048383;
+    img {
+    width: 100%;
     border-radius: 5px;
-    padding: 8px 30px;
+    position: relative;
+    background-color: $woodsmoke;
+    }
+
+    h3 {
+      text-align: center;
+      color: $woodsmoke;
+      font-weight: bold;
+    }
+
   }
-}
-
-.col-4 {
-
-  
-  img {
-  width: 100%;
-  border-radius: 5px;
-  position: relative;
-  background-color: #000000;
-  
-  }
-
-  h3 {
-    text-align: center;
-    color: #000000;
-    font-weight: bold;
-    
-  }
-
-}
 
 
 

@@ -38,12 +38,16 @@ export default {
   @import './assets/style/general';
   @import './assets/style/mixins';
 
+  body {
+  color: $woodsmoke;
+  }
+
   ul {
     list-style: none;
     
     a {
     text-decoration: none;
-    color: #000000
+    color: $woodsmoke;
     }
   }
 

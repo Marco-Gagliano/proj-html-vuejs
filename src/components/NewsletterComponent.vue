@@ -38,47 +38,48 @@ export default {
 
 <style lang="scss" scoped>
 
-.newsletter {
-  background-color: #111117;
+  @import '../assets/style/vars';
 
-  h6 {
-    color: #048383;
-    font-weight: bold;
-    text-transform: uppercase;
+  .newsletter {
+    background-color: $woodsmoke;
+
+    h6 {
+      color: $blue_lagoon;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      color: $white;
+      font-weight: bold;
+    }
+
+    p {
+      padding-right: 221px;
+      color: $silver_sand;
+    }
   }
 
-  h1 {
-    color: #FFFFFF;
-    font-weight: bold;
-  }
-
-  p {
-    padding-right: 221px;
-    color: #BCBDBD;
-  }
-}
-
-.col-6 {
-  
-  input {
-    margin-bottom: 10px;
-    width: 60%;
-    padding: 10px;
-    border-radius: 5px;
-    border: 0;
-    background-color: #1D2528;
-    color: #BCBDBD;
-  }
-
-  button {
+  .col-6 {
     
-    background-color: #048383;
-    color: #FFFFFF;
-    border: none;
-    border: 1px solid #048383;
-    border-radius: 5px;
-    padding: 8px 30px;
+    input {
+      margin-bottom: 10px;
+      width: 60%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 0;
+      background-color: $shark;
+      color: $silver_sand;
+    }
+
+    button {
+      background-color: $blue_lagoon;
+      color: $white;
+      border: none;
+      border: 1px solid $blue_lagoon;
+      border-radius: 5px;
+      padding: 8px 30px;
+    }
   }
-}
 
 </style>

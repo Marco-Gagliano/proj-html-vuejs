@@ -91,8 +91,10 @@ export default {
 
 <style lang="scss" scoped>
 
+  @import '../assets/style/vars';
+
   .service {
-    background-color: #111117;
+    background-color: $woodsmoke;
   }
 
   h1, h5, h6 {
@@ -100,15 +102,15 @@ export default {
   }
 
   h6 {
-    color: #048383
+    color: $blue_lagoon
   }
 
   h1 {
-    color: #FFFFFF
+    color: $white
   }
 
   p {
-    color: #BCBDBD
+    color: $silver_sand
   }
 
 
@@ -121,10 +123,10 @@ export default {
   .col-5 button {
     float: right;
     margin: 0 10px;
-    background-color: rgba($color: #000000, $alpha: 0);
-    color: #FFFFFF;
+    background-color: rgba($color: $woodsmoke, $alpha: 0);
+    color: $white;
     border: none;
-    border: 1px solid #048383;
+    border: 1px solid $blue_lagoon;
     border-radius: 5px;
     padding: 8px 30px;
   }  
@@ -139,24 +141,24 @@ export default {
   }
 
   .description-service h5 {
-    color: #FFFFFF
+    color: $white;
   }
 
   .description-service .col {
-    background-color: #1D2528;
+    background-color: $shark;
     margin: 15px;
     padding: 30px 50px;
     border-radius: 7px;
   }
 
   .description-service i {
-    color: #048383;
+    color: $blue_lagoon;
   }
 
   .description-service .fa-arrow-right {
     float: right;
     font-size: 24px;
-    color: #098081;
+    color: $surfie_green;
   }
   // /DESCRIPTION SERVICE
 

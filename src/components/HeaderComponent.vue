@@ -123,6 +123,7 @@ export default {
 <style lang="scss" scoped>
 
   @import '../assets/style/general';
+  @import '../assets/style/vars';
   
 
   // GENERAL PRESETS
@@ -135,11 +136,11 @@ export default {
 
   i {
     margin: 0 20px;
-    color: #676669
+    color: $salt_box;
   }
 
   span {
-    color: #676669
+    color: $salt_box;
   }
 
   p {
@@ -152,13 +153,13 @@ export default {
 
   // INFO
   .info {
-    background-color: #1D2528;
+    background-color: $shark;
     
   }
 
   .info a {
     text-decoration: none;
-    color: #676669;
+    color: $salt_box;
   }
 
   .info ul {
@@ -184,16 +185,16 @@ export default {
 
   .menu a {
     text-decoration: none;
-    color: #FFFFFF;
+    color: $white;
     margin: 0 10px;
   }
 
   .menu button {
     margin: 0 10px;
-    background-color: #52BABB;
-    color: #FFFFFF;
+    background-color: $fountain_blue;
+    color: $white;
     border: none;
-    border: 1px solid #000000;
+    border: 1px solid $woodsmoke;
     border-radius: 5px;
     padding: 8px 30px;
   }
@@ -215,18 +216,14 @@ export default {
 
   .description button {
     margin: 0 10px;
-    background-color: #52BABB;
+    background-color: $fountain_blue;
     color: #FFFFFF;
     border: none;
-    border: 1px solid #000000;
+    border: 1px solid $woodsmoke;
     border-radius: 5px;
     padding: 8px 30px;
   }
 
   // /DESCRIPTION
-
-
-  
-
 
 </style>

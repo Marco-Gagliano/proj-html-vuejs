@@ -46,8 +46,9 @@ export default {
 
 <style lang="scss" scoped>
 
+  @import '../assets/style/vars';
+
   .results {
-    // background-image: url(../assets/images/results.jpg);
     background: linear-gradient(
             rgba(0, 0, 0, 0.7), 
             rgba(0, 0, 0, 0.7)
@@ -63,15 +64,15 @@ export default {
   }
 
   p {
-    color: #048383;
+    color: $blue_lagoon;
   }
 
   .col-3 h2 {
-    color: #048383;
+    color: $blue_lagoon;
   }
     
   .col-3 p {  
-    color: #FFFFFF;
+    color: $white;
   }
 
 </style>

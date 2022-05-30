@@ -243,6 +243,8 @@ export default {
 
 <style lang="scss" scoped>
 
+  @import '../assets/style/vars';
+
   footer {
     padding: 0;
   }
@@ -250,7 +252,7 @@ export default {
   .contacts {
     background-image: url(../assets/images/bg-7.jpg);
     background-position: center;
-    color: #BCBDBD;
+    color: $silver_sand;
 
     ul {
       margin-bottom: 0px;
@@ -273,7 +275,7 @@ export default {
 
   h3 {
     font-weight: bold;
-    color: #E7EEEA;
+    color: $gray_nurse;
   }
 
   p {
@@ -287,16 +289,16 @@ export default {
   
   button {
     background: none;
-    color: #FFFFFF;
+    color: $white;
     border: none;
-    border: 1px solid #048383;
+    border: 1px solid $blue_lagoon;
     border-radius: 5px;
     padding: 8px 30px;
     margin: 15px 0;
   }
 
   .contact {
-    background-color: rgba($color: #1D2528, $alpha: 0.4);
+    background-color: rgba($color: $shark, $alpha: 0.4);
     border-radius: 10px;
     margin-right: 30px;
     width: calc(100% / 5);
@@ -306,7 +308,7 @@ export default {
       font-size: 20px;
 
       a {
-        color: #BCBDBD;
+        color: $silver_sand;
       }
     }
   }
@@ -314,10 +316,8 @@ export default {
 
 
   .credits {
-    color: #BCBDBD;
-    background-color: #111117;
-    
-
+    color: $silver_sand;
+    background-color: $woodsmoke;
   }
 
     .col-6 {

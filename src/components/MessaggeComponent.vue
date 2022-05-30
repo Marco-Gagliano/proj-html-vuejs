@@ -87,10 +87,12 @@ export default {
 
 <style lang="scss" scoped>
 
+  @import '../assets/style/vars';
+
   .send-messagge {
 
     h6 {
-      color: #048383;
+      color: $blue_lagoon;
       text-transform: uppercase;
       font-weight: bold;
     }
@@ -100,11 +102,11 @@ export default {
     }
 
     p {
-      color: #676669
+      color: $salt_box;
     }
 
     input {
-      background-color: #E7EEE9;
+      background-color: $gray_nurse;
       border: 0;
       margin-bottom: 10px;
       padding: 10px;
@@ -125,30 +127,30 @@ export default {
     }
 
     button {
-      background-color: #048383;
-      color: #FFFFFF;
+      background-color: $blue_lagoon;
+      color: $white;
       border: none;
-      border: 1px solid #048383;
+      border: 1px solid $blue_lagoon;
       border-radius: 5px;
       padding: 8px 30px;
     }
 
     .button-map {
-      background-color: #FFFFFF;
-      color: #048383;
+      background-color: $white;
+      color: $blue_lagoon;
       border: none;
-      border: 1px solid #048383;
+      border: 1px solid $blue_lagoon;
       border-radius: 5px;
       padding: 8px 30px;
     }
   }
 
   .contact-messagge {
-    color: #676669;
+    color: $salt_box;
     padding-left: 35px;
 
     h4 {
-      color: #1D2528;
+      color: $shark;
     }
 
     p {
@@ -156,8 +158,8 @@ export default {
     }
 
     i {
-      color: #048383;
-      background-color: #E7EEE9;
+      color: $blue_lagoon;
+      background-color: $gray_nurse;
       padding: 12px;
       margin-right: 15px;
       font-size: 18px;

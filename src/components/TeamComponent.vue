@@ -141,88 +141,89 @@ export default {
 
 <style lang="scss" scoped>
 
-h6 {
-  color: #52BABB;
-  font-weight: bold;
-}
+  @import '../assets/style/vars';
 
-.col-6 img {
-  float: left;
-  width: 31%;
-  border-radius: 5px;
-  margin-right: 20px;
-}
-
-.col-6 {
-  margin: 20px 0;
-  
-}
-
-.col-4 {
-  background-color: #048383;
-  padding: 35px;
-  border-radius: 5px;
-
-  i {
-    float: right;
-    font-size: 20px;
-  }
-
-  h3 {
-    color: #FFFFFF;
+  h6 {
+    color: $fountain_blue;
     font-weight: bold;
   }
 
-  p {
-    color: #BCBDBD;
-    padding-right: 69px;
+  .col-6 img {
+    float: left;
+    width: 31%;
+    border-radius: 5px;
+    margin-right: 20px;
+  }
+
+  .col-6 {
     margin: 20px 0;
+    
+  }
+
+  .col-4 {
+    background-color: $blue_lagoon;
+    padding: 35px;
+    border-radius: 5px;
+
+    i {
+      float: right;
+      font-size: 20px;
+    }
+
+    h3 {
+      color: $white;
+      font-weight: bold;
+    }
+
+    p {
+      color: $silver_sand;
+      padding-right: 69px;
+      margin: 20px 0;
+      font-size: 19px;
+    }
+
+    span {
+      color: $white;
+      font-size: 18px;
+      font-weight: bold;
+      padding-top: 50px;
+      
+    }
+  }
+
+  .description-team h1 {
+    font-size: 65px;
+  }
+
+  .description-team p {
+    padding-right: 150px;
+    color: $salt_box;
     font-size: 19px;
   }
 
-  span {
-    color: #FFFFFF;
-    font-size: 18px;
-    font-weight: bold;
-    padding-top: 50px;
-    
-  }
-}
-
-.description-team h1 {
-  font-size: 65px;
-}
-.description-team p {
-  padding-right: 150px;
-  color: #676669;
-  font-size: 19px;
-}
-
-.contact-team  {
-  display: flex;
-  justify-content: start;
-}
-
-.info-team {
-
-  h3 {
-    font-weight: bold;
+  .contact-team  {
+    display: flex;
+    justify-content: start;
   }
 
-  span {
-    color: #676669
-  }
+  .info-team {
 
-  i {
-    color: #048383;
-    background-color: #E7EEE9;
-    font-size: 18px;
-    margin: 28px 16px;
-    padding: 10px;
-    border-radius: 100px;
-  }
-}
+    h3 {
+      font-weight: bold;
+    }
 
-  
+    span {
+      color: $salt_box;
+    }
+
+    i {
+      color: $blue_lagoon;
+      background-color: $gray_nurse;
+      font-size: 18px;
+      margin: 28px 16px;
+      padding: 10px;
+      border-radius: 100px;
+    }
+  }
 
 </style>

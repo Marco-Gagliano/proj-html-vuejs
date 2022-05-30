@@ -30,27 +30,27 @@ export default {
 
 <style lang="scss" scoped>
 
-.jumbotron {
-  padding: 100px 0
-}
+  @import '../assets/style/vars';
 
-span {
-  color: #048383
-}
+  .jumbotron {
+    padding: 100px 0
+  }
 
-p {
-  margin: 0 300px;
-  color: #676669
-}
+  span {
+    color: $blue_lagoon;
+  }
 
-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 60%;
-  padding: 30px 0;
-}
+  p {
+    margin: 0 300px;
+    color: $salt_box;
+  }
 
-  
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    padding: 30px 0;
+  }
 
 </style>
