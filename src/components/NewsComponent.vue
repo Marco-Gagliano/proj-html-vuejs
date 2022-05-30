@@ -48,6 +48,7 @@ export default {
 <style lang="scss" scoped>
 
   @import '../assets/style/vars';
+  @import '../assets/style/mixins';
 
   .news {
     background-color: $gray_nurse;
@@ -70,13 +71,7 @@ export default {
     }
 
     button {
-      margin: 0 10px;
-      background-color: $blue_lagoon;
-      color: $white;
-      border: none;
-      border: 1px solid $blue_lagoon;
-      border-radius: 5px;
-      padding: 8px 30px;
+      @include button_type1();
     }
   }
 

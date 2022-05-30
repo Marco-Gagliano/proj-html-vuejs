@@ -92,6 +92,7 @@ export default {
 <style lang="scss" scoped>
 
   @import '../assets/style/vars';
+  @import '../assets/style/mixins';
 
   .service {
     background-color: $woodsmoke;
@@ -121,14 +122,8 @@ export default {
   }
 
   .col-5 button {
+    @include button_type2();
     float: right;
-    margin: 0 10px;
-    background-color: rgba($color: $woodsmoke, $alpha: 0);
-    color: $white;
-    border: none;
-    border: 1px solid $blue_lagoon;
-    border-radius: 5px;
-    padding: 8px 30px;
   }  
 
   // /INFO SERVICE

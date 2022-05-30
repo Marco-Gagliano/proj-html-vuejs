@@ -1,0 +1,40 @@
+
+@mixin button_type1(){
+  background-color: rgba($color: $surfie_green, $alpha: 1.0);
+  color: $white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 30px;
+  transition: ease-in .2s;
+
+  &:hover {
+    background-color: $fountain_blue;
+  }
+}
+
+@mixin button_type2(){
+  background-color: rgba($color: $surfie_green, $alpha: 0);
+  color: $white;
+  border: 1px solid $surfie_green;
+  border-radius: 5px;
+  padding: 8px 30px;
+  transition: ease-in .2s;
+
+  &:hover {
+    background-color: $surfie_green;
+  }
+}
+
+@mixin button_type3(){
+  background-color: rgba($color: $surfie_green, $alpha: 0);
+  color: $surfie_green;
+  border: 1px solid $surfie_green;
+  border-radius: 5px;
+  padding: 8px 30px;
+  transition: ease-in .2s;
+
+  &:hover {
+    background-color: $surfie_green;
+    color: $white;
+  }
+}

@@ -31,6 +31,7 @@ export default {
 <style lang="scss" scoped>
 
   @import '../assets/style/vars';
+  @import '../assets/style/mixins';
 
   .jumbotron {
     padding: 100px 0

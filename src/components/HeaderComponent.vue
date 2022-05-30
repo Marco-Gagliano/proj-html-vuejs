@@ -124,12 +124,18 @@ export default {
 
   @import '../assets/style/general';
   @import '../assets/style/vars';
+  @import '../assets/style/mixins';
   
 
   // GENERAL PRESETS
 
   .menu-description {
-    background-image: url(../assets/images/bg-2.jpg);
+    //background-image: url(../assets/images/bg-2.jpg);
+    background: linear-gradient(
+            rgba(0, 0, 0, 0.3), 
+            rgba(0, 0, 0, 0.3)
+    ),
+    url(../assets/images/bg-2.jpg);
     background-size: cover;
     height: 1055px;
   }
@@ -190,13 +196,7 @@ export default {
   }
 
   .menu button {
-    margin: 0 10px;
-    background-color: $fountain_blue;
-    color: $white;
-    border: none;
-    border: 1px solid $woodsmoke;
-    border-radius: 5px;
-    padding: 8px 30px;
+    @include button_type1();
   }
 
   // /MENU
@@ -208,20 +208,15 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
 
-  .description p {
-    color: #BCBDBD;
-  }
+    p {
+      color: #BCBDBD;
+    }
 
-  .description button {
-    margin: 0 10px;
-    background-color: $fountain_blue;
-    color: #FFFFFF;
-    border: none;
-    border: 1px solid $woodsmoke;
-    border-radius: 5px;
-    padding: 8px 30px;
+    button {
+      @include button_type2();
+    }
+
   }
 
   // /DESCRIPTION

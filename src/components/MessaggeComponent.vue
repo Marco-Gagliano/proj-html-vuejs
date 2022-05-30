@@ -88,6 +88,7 @@ export default {
 <style lang="scss" scoped>
 
   @import '../assets/style/vars';
+  @import '../assets/style/mixins';
 
   .send-messagge {
 
@@ -127,21 +128,11 @@ export default {
     }
 
     button {
-      background-color: $blue_lagoon;
-      color: $white;
-      border: none;
-      border: 1px solid $blue_lagoon;
-      border-radius: 5px;
-      padding: 8px 30px;
+      @include button_type1();
     }
 
     .button-map {
-      background-color: $white;
-      color: $blue_lagoon;
-      border: none;
-      border: 1px solid $blue_lagoon;
-      border-radius: 5px;
-      padding: 8px 30px;
+      @include button_type3();
     }
   }
 

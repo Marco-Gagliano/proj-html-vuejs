@@ -142,6 +142,7 @@ export default {
 <style lang="scss" scoped>
 
   @import '../assets/style/vars';
+  @import '../assets/style/mixins';
 
   h6 {
     color: $fountain_blue;

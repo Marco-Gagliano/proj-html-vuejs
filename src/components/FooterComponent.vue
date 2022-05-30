@@ -244,6 +244,7 @@ export default {
 <style lang="scss" scoped>
 
   @import '../assets/style/vars';
+  @import '../assets/style/mixins';
 
   footer {
     padding: 0;
@@ -288,13 +289,7 @@ export default {
   }
   
   button {
-    background: none;
-    color: $white;
-    border: none;
-    border: 1px solid $blue_lagoon;
-    border-radius: 5px;
-    padding: 8px 30px;
-    margin: 15px 0;
+    @include button_type2();
   }
 
   .contact {

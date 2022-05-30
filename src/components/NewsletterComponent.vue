@@ -39,6 +39,7 @@ export default {
 <style lang="scss" scoped>
 
   @import '../assets/style/vars';
+  @import '../assets/style/mixins';
 
   .newsletter {
     background-color: $woodsmoke;
@@ -73,12 +74,7 @@ export default {
     }
 
     button {
-      background-color: $blue_lagoon;
-      color: $white;
-      border: none;
-      border: 1px solid $blue_lagoon;
-      border-radius: 5px;
-      padding: 8px 30px;
+      @include button_type1();
     }
   }
 
