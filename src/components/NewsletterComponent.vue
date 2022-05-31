@@ -7,17 +7,16 @@
 
         <div class="col-6">
           <h6>newsletter</h6>
-          <h1 class="my-3">Know First</h1>
+          <h1 class="my-3"><span id="know">Know</span> First</h1>
           <p>Follow closely and receive content about our company and the news of the current market.</p>
         </div>
 
         <div class="col-6">
-        
-          <input type="text" name="" placeholder="Name">
-          <input type="text" name="" placeholder="Email">
-        
-        <br>
-        <button>SUBSCRIBE</button>
+          <input v-model.trim="nameForm" type="text" name="yout_name" placeholder="Name">
+          <input v-model.trim="emailForm" type="email" name="your_email" placeholder="Email">
+          <br>
+          <button @click="sendNewsletter()">SUBSCRIBE</button>
+          <h4>{{confirm}}</h4>
         </div>
 
       </div>
@@ -31,7 +30,24 @@
 <script>
 
 export default {
-  name: 'NewsletterComponent'
+  name: 'NewsletterComponent',
+
+  data() {
+    return {
+      nameForm: '',
+      emailForm: '',
+      confirm: ''
+    }
+  },
+
+  methods: {
+    sendNewsletter(){
+      this.$emit( this.nameForm , this.emailForm );
+      this.nameForm = '';
+      this.emailForm = '';
+      this.confirm = '*Registrazione Confermata';
+    },
+  }
 }
 </script>
 
@@ -43,6 +59,24 @@ export default {
 
   .newsletter {
     background-color: $woodsmoke;
+    padding: 100px 0px;
+
+    .container {
+      padding: 0px 120px;
+    }
+
+    h1 {
+      color: $white;
+      font-weight: bold;
+
+      #know {
+        @include bg-text3();
+      }
+    }
+
+    h4 {
+      color: $blue_lagoon;
+    }
 
     h6 {
       color: $blue_lagoon;
@@ -50,13 +84,8 @@ export default {
       text-transform: uppercase;
     }
 
-    h1 {
-      color: $white;
-      font-weight: bold;
-    }
-
     p {
-      padding-right: 221px;
+      padding-right: 140px;
       color: $silver_sand;
     }
   }
