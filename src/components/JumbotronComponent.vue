@@ -6,10 +6,17 @@
 
       <div class="row text-center">
         <div class="col">
-          <span class="text-uppercase fw-bold">introdution video</span>
-          <h1 class="my-3 fw-bold">Advisory Performance</h1>
+
+          <h6 class="text-uppercase fw-bold">introdution video</h6>
+          <h1 class="my-3 fw-bold">Advisory <span id="performance">Performance</span></h1>
           <p>Financial executives need to review their strategies, operating models and capabilities so that their areas can generate sound information for better decision making.</p>
-          <img src="../assets/images/video-1.jpg" alt="Video Jumbotron">
+
+          <div class="jumbo-video">
+            <img src="../assets/images/video-1.jpg" alt="Video Jumbotron">
+            <a href="#"><i class="fa-solid fa-play sx"></i></a>
+            <a href="#"><i class="fa-solid fa-play dx"></i></a>
+          </div>
+
         </div>
       </div>
 
@@ -34,11 +41,11 @@ export default {
   @import '../assets/style/mixins';
 
   .jumbotron {
-    padding: 100px 0
+    padding: 175px 0
   }
 
-  span {
-    color: $blue_lagoon;
+  h6 {
+    color: $fountain_blue;
   }
 
   p {
@@ -52,6 +59,30 @@ export default {
     margin-right: auto;
     width: 60%;
     padding: 30px 0;
+  }
+
+  .jumbo-video{
+    position: relative;
+    
+    .sx {
+      position: absolute;
+      color: rgba($color: $blue_lagoon, $alpha: 0.8);
+      bottom: 170px;
+      left: 618px;
+      font-size: 80px;
+    }
+    
+    .dx {
+      position: absolute;
+      color: rgba($color: $white, $alpha: 0.7);
+      bottom: 162px;
+      left: 618px;
+      font-size: 80px;
+    }
+  }
+
+  #performance {
+    @include bg-text1();
   }
 
 </style>
