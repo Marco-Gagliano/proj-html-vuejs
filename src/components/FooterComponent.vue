@@ -1,12 +1,12 @@
 <template>
   
   <footer class="container-fluid">
-    <div class="contacts container-fluid py-5">
-      <div class="container py-5">
+    <div class="contacts container-fluid">
+      <div class="container">
         <div class="row">
 
           <div class="col-3 info">
-            <h4>nexgen</h4>          
+            <h4><span id="nex">nex</span>gen</h4>          
             <ul>
               
               <li>
@@ -20,7 +20,7 @@
 
               <li>
                 <i class="fa-solid fa-envelope"></i>
-                <span>hello@spanle.com</span>
+                <span>hello@example.com</span>
               </li>
 
               <li>
@@ -39,14 +39,13 @@
 
             <ul>
               <li>
-                <h3>About</h3>
+                <h3 class="py-3">About</h3>
               </li>
             </ul>
 
             <ul v-for="(contact, index) in aboutContacts" :key="`aboutContacts${index}`">
               <li>  
-                <a :href="contact.href"><i :class="contact.icon"></i>
-                {{contact.name}}</a>
+                <a :href="contact.href"><i :class="contact.icon"></i>{{contact.name}}</a>
               </li>
             </ul>
 
@@ -56,14 +55,13 @@
 
             <ul>
               <li>
-                <h3>Services</h3>
+                <h3 class="py-3">Services</h3>
               </li>
             </ul>
 
             <ul v-for="(contact, index) in servicesContacts" :key="`servicesContacts${index}`">
               <li>  
-                <a :href="contact.href"><i :class="contact.icon"></i>
-                {{contact.name}}</a>
+                <a :href="contact.href"><i :class="contact.icon"></i>{{contact.name}}</a>
               </li>
             </ul>
 
@@ -73,42 +71,38 @@
 
             <ul>
               <li>
-                <h3>Support</h3>
+                <h3 class="py-3">Support</h3>
               </li>
             </ul>
 
             <ul v-for="(contact, index) in supportContacts" :key="`supportContacts${index}`">
               <li>  
-                <a :href="contact.href"><i :class="contact.icon"></i>
-                {{contact.name}}</a>
+                <a :href="contact.href"><i :class="contact.icon"></i>{{contact.name}}</a>
               </li>
             </ul>
 
           </div>
           
         </div>
-
       </div>
     </div>
 
-    <div class="credits container-fluid">
+    <div class="credits container-fluid py-4">
       <div class="container">
-        <div class="row d-flex align-items-center">
+        <div class="row d-flex justify-content-between">
 
-          <div class="col-6"> 
-            <p>Enjoy the low price. We are Tracking any intention of piracy</p>
+          <div class="col-6 left"> 
+            <span>Enjoy the low price. We are Tracking any intention of piracy</span>
           </div>
 
-          <div class="col-6 d-flex justify-content-end align-items-center">
-            <p>@2020 NEXGEN is Proudly Powered by Codings.</p>
+          <div class="col-6 right">
+            <span>@2020 NEXGEN is Proudly Powered by <span id="codings">Codings.</span></span>
           </div>
 
         </div>
       </div>
     </div>
 
-
-  
   </footer>
 
 </template>
@@ -254,68 +248,84 @@ export default {
     background-image: url(../assets/images/bg-7.jpg);
     background-position: center;
     color: $silver_sand;
+    padding: 125px 0px;
 
     ul {
       margin-bottom: 0px;
     }
-  }
 
-  .info {
-    ul {
-      padding: 0;
+    i {
+      padding-right: 10px;
     }
 
   }
 
+  .info {
 
-  h4 {
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-  }
+    #nex {
+      @include bg-text4()
+    }
 
-  h3 {
-    font-weight: bold;
-    color: $gray_nurse;
-  }
+    h4 {
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      margin-bottom: 35px;
+    }
 
-  p {
-    padding-right: 80px;
-  }
+    p {
+      padding-right: 70px;
+    }
 
+    ul {
+      padding: 0;
+    }
 
-  i {
-    padding-right: 10px;
-  }
-  
-  button {
-    @include button_type2();
+    li {
+      padding-bottom: 22px;
+      font-size: 18px;
+    }
+
+    button {
+      @include button_type2();
+    }
+
   }
 
   .contact {
     background-color: rgba($color: $shark, $alpha: 0.4);
     border-radius: 10px;
-    margin-right: 30px;
-    width: calc(100% / 5);
+    margin-left: 30px;
+    padding: 30px 0px;
+    width: 22.7%;
+
+    h3 {
+      font-weight: bold;
+      color: $gray_nurse;
+    }
 
     ul {
       margin: 10px;
-      font-size: 20px;
+      font-size: 17px;
 
       a {
         color: $silver_sand;
       }
     }
   }
-  
-
 
   .credits {
     color: $silver_sand;
-    background-color: $woodsmoke;
+    background-color: $black;
+
+    .right {
+      display: flex;
+      justify-content: end;
+    }
+
+    #codings {
+      color: $blue_lagoon
+    }
   }
 
-    .col-6 {
-      float: right;
-    }
 </style>
