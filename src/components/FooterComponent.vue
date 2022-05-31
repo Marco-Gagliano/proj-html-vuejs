@@ -91,7 +91,7 @@
       <div class="container">
         <div class="row d-flex justify-content-between">
 
-          <div class="col-6 left"> 
+          <div class="col-6"> 
             <span>Enjoy the low price. We are Tracking any intention of piracy</span>
           </div>
 

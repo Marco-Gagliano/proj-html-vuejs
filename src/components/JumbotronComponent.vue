@@ -85,4 +85,5 @@ export default {
     @include bg-text1();
   }
 
+
 </style>

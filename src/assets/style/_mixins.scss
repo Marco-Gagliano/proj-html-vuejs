@@ -38,3 +38,33 @@
     color: $white;
   }
 }
+
+
+@mixin bg-text1() {
+  background-color: $gray_nurse;
+  color: $blue_lagoon;
+  padding: 2px 15px;
+  border-radius: 5px;
+}
+
+@mixin bg-text2() {
+  background-color: rgba($color: $silver_sand, $alpha: 0.4);
+  color: $blue_lagoon;
+  padding: 2px 15px;
+  border-radius: 5px;
+}
+
+@mixin bg-text3() {
+  background-color: rgba($color: $blue_lagoon, $alpha: 0.2);
+  color: $white;
+  padding: 2px 15px;
+  border-radius: 5px;
+}
+
+@mixin bg-text4() {
+  background-color: rgba($color: $blue_lagoon, $alpha: 0.2);
+  color: $fountain_blue;
+  padding: 10px 0px 10px 25px;
+  border-radius: 50px 0px 0px 50px;
+  margin-right: 5px;
+}

@@ -4,7 +4,7 @@
 
     <div class="container">
 
-      <h6 class="text-uppercase mt-5">we like what we do</h6>
+      <h6 class="text-uppercase my-4">we like what we do</h6>
       <div class="row">
 
         <div class="description-team col-8">
@@ -206,5 +206,6 @@ export default {
       border-radius: 100px;
     }
   }
+
 
 </style>

@@ -119,4 +119,5 @@ export default {
     @include bg-text2();
   }
 
+
 </style>

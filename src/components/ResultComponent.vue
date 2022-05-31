@@ -5,27 +5,27 @@
     <div class="container text-center">
 
       <p class="text-uppercase pt-5">what are we doing</p>
-      <h1 class="text-light mb-1">Results in Numbers</h1>
+      <h1 class="mb-5"><span id="results">Results</span> in Numbers</h1>
 
       <div class="row">
         <div class="col-3 my-5">
-          <h2>128</h2>
-          <p>Certification</p>
+          <h1>128</h1>
+          <h3>Certification</h3>
         </div>
 
         <div class="col-3 my-5">
-          <h2>230</h2>
-          <p>Employees</p>
+          <h1>230</h1>
+          <h3>Employees</h3>
         </div>
 
         <div class="col-3 my-5">
-          <h2>517</h2>
-          <p>Customers</p>
+          <h1>517</h1>
+          <h3>Customers</h3>
         </div>
 
         <div class="col-3 my-5">
-          <h2>94</h2>
-          <p>Countries Served</p>
+          <h1>94</h1>
+          <h3>Countries Served</h3>
         </div>
 
       </div>
@@ -60,20 +60,34 @@ export default {
     background-size: cover;
   }
 
-  h1, h2, p {
-    font-weight: bold;
+  .container {
+    padding: 105px 0px;
+
+    h1, p {
+      font-weight: bold;
+      color: $white
+    }
+
+    p {
+      color: $blue_lagoon;
+    }
+
+    #results {
+      @include bg-text3();
+    }
   }
 
-  p {
-    color: $blue_lagoon;
+  .col-3 {
+
+    h1 {
+      color: $blue_lagoon;
+    }
+
+    h3 {  
+      color: $white;
+      font-weight: bold;
+    }
   }
 
-  .col-3 h2 {
-    color: $blue_lagoon;
-  }
-    
-  .col-3 p {  
-    color: $white;
-  }
 
 </style>
