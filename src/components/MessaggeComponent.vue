@@ -7,34 +7,34 @@
         <div class="col-6 my-5">
 
           <h6>send a messagge</h6>
-          <h1 class="my-4">Get in Touch</h1>
+          <h1 class="my-4">Get in  <span id="touch"> Touch</span></h1>
           <p class="my-4">We will respond to your messagge as soon as possible.</p>
 
           <div class="row">
 
             <div class="col-6">
-              <input type="text" placeholder="Name">
+              <input v-model.trim="nameForm" type="text" class="name" placeholder="Name">
             </div>
 
             <div class="col-6">
-              <input type="text" placeholder="Email">
+              <input v-model.trim="emailForm" type="text" placeholder="Email">
             </div>
             
-
             <div class="col-6">
-              <input type="text" placeholder="Phone">
+              <input v-model.trim="phoneForm" type="text" placeholder="Phone">
             </div>
 
             <div class="col-6">
-              <input type="text" placeholder="More Info">
+              <input v-model.trim="infoForm" type="text" placeholder="More Info">
             </div>
 
             <div class="col-12">
-              <input type="text" placeholder="Messagge" class="messagge">
+              <input v-model.trim="messaggeForm" type="text" placeholder="Messagge" class="messagge">
             </div>
 
             <div class="col mt-3">
-              <button>SEND</button>
+              <button @click="sendMessagge()">SEND</button>
+              <h4>{{confirm}}</h4>
             </div>
 
           </div>
@@ -80,8 +80,32 @@
 <script>
 
 export default {
-  name: 'MessaggeComponent'
+  name: 'MessaggeComponent',
+
+  data() {
+    return {
+      nameForm: '',
+      emailForm: '',
+      confirm: '',
+      phoneForm: '',
+      infoForm: '',
+      messaggeForm: '',
+    }
+  },
+
+  methods: {
+    sendMessagge(){
+      this.$emit( this.nameForm , this.emailForm );
+      this.nameForm = '';
+      this.emailForm = '';
+      this.phoneForm = '';
+      this.infoForm = '';
+      this.messaggeForm = '';
+      this.confirm = '*Messaggio Inviato';
+    },
+  }
 }
+
 </script>
 
 
@@ -90,12 +114,20 @@ export default {
   @import '../assets/style/vars';
   @import '../assets/style/mixins';
 
+  .container {
+    padding: 135px 0px;
+  }
+
   .send-messagge {
 
     h6 {
       color: $blue_lagoon;
       text-transform: uppercase;
       font-weight: bold;
+    }
+
+    h4 {
+      color: $blue_lagoon;
     }
 
     h1 {
@@ -113,6 +145,12 @@ export default {
       padding: 10px;
       border-radius: 5px;
       width: 100%;
+
+      .name {
+        background: url(../assets/images/image-1.png) no-repeat left;
+        padding-left: 25px;
+        background-size: 200px;
+      }
     }
 
     ul {
@@ -133,6 +171,7 @@ export default {
 
     .button-map {
       @include button_type3();
+      margin-top: 10px;
     }
   }
 
@@ -151,11 +190,18 @@ export default {
     i {
       color: $blue_lagoon;
       background-color: $gray_nurse;
-      padding: 12px;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
       margin-right: 15px;
       font-size: 18px;
       border-radius: 100px;
     }
+  }
+
+  #touch {
+    @include bg-text1();
   }
 
 </style>
