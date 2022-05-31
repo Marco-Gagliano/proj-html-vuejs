@@ -1,6 +1,6 @@
 <template>
   
-  <div class="team container-fluid my-5">
+  <div class="team container-fluid">
 
     <div class="container">
 
@@ -8,7 +8,8 @@
       <div class="row">
 
         <div class="description-team col-8">
-          <h1 class="fw-bold">Team of Experts</h1>
+
+          <h1 class="fw-bold"> <span id="team">Team</span> of Experts</h1>
           <p class="mb-3">Ethics and integrity are the bases on which our professionals build their careers. They are fundamentals that become daily attitudes.</p>
 
           <div class="row">
@@ -28,42 +29,8 @@
                 </div>
 
               </div>
+
             </div>
-
-            
-            <!-- <div class="col-6">
-              
-              <img src="../assets/images/team-2.jpg" alt="Emma Lopez Image">
-              
-              <div class="info-team">
-                <h3>Emma Lopez</h3>
-                <span>CHIEF MARKETING</span>
-
-                <div class="contact-team">
-                  <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                  <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                  <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                </div>
-
-              </div>
-            </div>
-            
-            <div class="col-6">
-              
-              <img src="../assets/images/team-4.jpg" alt="T. Johnson Image">
-              
-              <div class="info-team">
-                <h3>T. Johnson</h3>  
-                <span>CEO & PRESIDENT</span>
-
-                <div class="contact-team">
-                  <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                  <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                  <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                </div>
-
-              </div>
-            </div> -->
 
           </div>
 
@@ -75,7 +42,6 @@
           <p>Vivamus efficitur et est quis posuere. Nulla sollicitudin vulputate dui, id pretium tortor congue ue. Integer aliquet justo eu quam volupat ullamcorper.</p>
           <p>Duis ut hendrerit mauris. Phasellus faucibus ut enim vel tincidunt. Nunc venenatis a dui et laoreet</p>
           <span class="py-4">T. Johnson <i class="fa-solid fa-quote-right"></i></span>
-          
         </div>  
 
       </div>
@@ -132,8 +98,6 @@ export default {
         },
       ]
     }
-
-
   }
 }
 </script>
@@ -144,12 +108,16 @@ export default {
   @import '../assets/style/vars';
   @import '../assets/style/mixins';
 
+  .container {
+    padding: 90px 0;
+  }
+
   h6 {
     color: $fountain_blue;
     font-weight: bold;
   }
 
-  .col-6 img {
+  img {
     float: left;
     width: 31%;
     border-radius: 5px;
@@ -158,7 +126,6 @@ export default {
 
   .col-6 {
     margin: 20px 0;
-    
   }
 
   .col-4 {
@@ -188,29 +155,39 @@ export default {
       font-size: 18px;
       font-weight: bold;
       padding-top: 50px;
-      
     }
   }
 
-  .description-team h1 {
-    font-size: 65px;
-  }
+  .description-team {
 
-  .description-team p {
-    padding-right: 150px;
+    h1 {
+      font-size: 55px;
+      color: $woodsmoke;
+    }
+
+    #team {
+      @include bg-text1();
+    }
+
+    p {
+    padding-right: 170px;
     color: $salt_box;
     font-size: 19px;
-  }
+    }
 
-  .contact-team  {
-    display: flex;
-    justify-content: start;
+ 
   }
 
   .info-team {
 
+    .contact-team {
+      display: flex;
+      justify-content: start;
+    }
+
     h3 {
       font-weight: bold;
+      color: $woodsmoke;
     }
 
     span {
@@ -221,8 +198,11 @@ export default {
       color: $blue_lagoon;
       background-color: $gray_nurse;
       font-size: 18px;
-      margin: 28px 16px;
-      padding: 10px;
+      margin: 40px 3px 0px 3px;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
       border-radius: 100px;
     }
   }
